@@ -8,7 +8,7 @@ import styled from 'styled-components'
 // `;
 const StyledCard = styled.div`
     border:1px solid black;
-    width: 100%;
+    width: 250px;
     background-color: white;
     border-radius: 5px;
     padding:2%;

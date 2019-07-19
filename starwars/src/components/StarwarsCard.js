@@ -2,13 +2,14 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 //import CardComponent from './cardComponent.js'
 import CardContainer from './cardContainer'
+//https://swapi.co/api/people/?page=1
 
 function StarWarsCard() {
     const [person, setPerson] = useState([])
 
     useEffect(() => {
         axios
-        .get('https://swapi.co/api/people/?page=1')
+        .get('https://henry-mock-swapi.herokuapp.com/api')
         .then(response => {
             // console.log(response.data.results)
             // const persons = response.data.results
