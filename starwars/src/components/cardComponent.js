@@ -1,8 +1,22 @@
 import React from 'react'
 import { Card, Image } from 'semantic-ui-react'
+import styled from 'styled-components'
+
+// const StyledDiv = styled.div`
+//     display: flex;
+//     flex-direction: row;
+// `;
+const StyledCard = styled.div`
+    border:1px solid black;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+`;
 
 const CardComponent = ({name, birthDate, description}) => (
+
   <Card>
+      <StyledCard>
     <Image src='' wrapped ui={false} />
     <Card.Content>
       <Card.Header>{name}</Card.Header>
@@ -17,6 +31,7 @@ const CardComponent = ({name, birthDate, description}) => (
       <a>
       </a>
     </Card.Content>
+    </StyledCard>
   </Card>
 )
 
