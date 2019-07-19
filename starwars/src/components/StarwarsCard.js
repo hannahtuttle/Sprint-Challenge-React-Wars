@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import { Card, Icon, Image } from 'semantic-ui-react'
 import CardComponent from './cardComponent.js'
 
 function StarWarsCard() {
@@ -11,16 +10,20 @@ function StarWarsCard() {
         .get('https://swapi.co/api/people/')
         .then(response => {
             // console.log(response.data.results)
-            const persons = response.data.results
-            setPerson(persons)
-            console.log(persons)
+            // const persons = response.data.results
+            setPerson(response.data.results)
+            
         }).catch(error => {
             console.log('Not getting info from startwars api', error)
         })
     }, [])
+        console.log(person)
     return <div>
-        {}
-        <CardComponent />
+        {/* {person.map((character, index) => (
+            <CardComponent 
+            name={character.name}
+            key={index}/>))} */}
+        
     </div>
 }
 
