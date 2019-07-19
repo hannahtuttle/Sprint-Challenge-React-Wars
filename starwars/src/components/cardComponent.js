@@ -11,9 +11,11 @@ const StyledCard = styled.div`
     width: 100%;
     background-color: white;
     border-radius: 5px;
+    padding:2%;
+    margin: 10%;
 `;
 
-const CardComponent = ({name, birthDate, description}) => (
+const CardComponent = ({name, birthDate, eyeColor, gender, hairColor, height}) => (
 
   <Card>
       <StyledCard>
@@ -24,12 +26,16 @@ const CardComponent = ({name, birthDate, description}) => (
         <span className='date'>Birthdate: {birthDate}</span>
       </Card.Meta>
       <Card.Description>
-        {description}
+        Character attributes:
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <a>
-      </a>
+      
+          <p>Eye Color: {eyeColor}</p>
+          <p>Gender: {gender}</p>
+          <p>Hair Color: {hairColor}</p>
+          <p>Height: {height}</p>
+        
     </Card.Content>
     </StyledCard>
   </Card>
